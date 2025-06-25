@@ -1,10 +1,12 @@
+import Layout from '../components/Layout'
 import Hero from '../components/Hero'
+import About from '../components/About'
 
 export default function Home() {
   return (
-    <main>
+    <Layout>
       <Hero />
-      {/* Add About, Skills, etc. below this */}
-    </main>
+      <About />
+    </Layout>
   )
 }
