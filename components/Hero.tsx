@@ -10,7 +10,7 @@ export default function Hero() {
         </p>
   
         <a
-          href="/abhijit_resume.pdf"
+          href="/Abhijit_backend_developer.pdf"
           download
           className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded transition"
         >
