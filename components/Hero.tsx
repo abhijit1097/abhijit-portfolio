@@ -2,7 +2,7 @@ export default function Hero() {
     return (
       <section id="home" className="text-center">
         <h1 className="text-4xl md:text-5xl font-bold mb-4">
-          Hi, I'm Abhijit <span className="inline-block">👋</span>
+          Hi, I&rsquo;m Abhijit <span className="inline-block">👋</span>
         </h1>
   
         <p className="text-gray-400 text-lg md:text-xl mb-6 max-w-2xl mx-auto">
