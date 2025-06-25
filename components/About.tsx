@@ -1,12 +1,14 @@
 export default function About() {
     return (
-      <section id="about" className="py-20 text-center">
-        <h2 className="text-3xl font-bold mb-6">About Me</h2>
-        <p className="text-gray-300 max-w-3xl mx-auto text-lg leading-relaxed">
-          I'm a Senior Backend Engineer with over 5 years of experience designing and building scalable, secure systems
-          using <strong>Node.js</strong>, <strong>TypeScript</strong>, <strong>Kafka</strong>, and <strong>microservices architecture</strong>.
-          I’ve led engineering initiatives in both product and service-based companies, built orchestration engines, notification
-          systems, and deployed cloud-native solutions using <strong>AWS</strong>, <strong>Docker</strong>, <strong>Kubernetes</strong>, and <strong>Redis</strong>.
+      <section id="about" className="text-center space-y-6">
+        <h2 className="text-2xl md:text-3xl font-bold">About Me</h2>
+  
+        <p className="text-gray-400 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
+          I am a seasoned Backend Engineer with extensive experience in designing
+          scalable and secure backend systems. My expertise includes working with
+          microservices architecture, event-driven patterns, and cloud technologies
+          like AWS and GCP. I enjoy building systems that are efficient, testable,
+          and production-ready.
         </p>
       </section>
     )

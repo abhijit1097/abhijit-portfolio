@@ -3,19 +3,23 @@ import { ReactNode } from 'react'
 
 export default function Layout({ children }: { children: ReactNode }) {
   return (
-    <div className="bg-gray-900 text-white min-h-screen">
-      <header className="sticky top-0 z-50 bg-gray-800 shadow-md">
-        <div className="max-w-5xl mx-auto px-4 py-3 flex justify-between items-center">
-          <h1 className="text-xl font-bold">Abhijit</h1>
-          <nav className="space-x-4 text-sm">
-            <Link href="#about" className="hover:text-blue-400">About</Link>
-            <Link href="#skills" className="hover:text-blue-400">Skills</Link>
-            <Link href="#experience" className="hover:text-blue-400">Experience</Link>
-            <Link href="#contact" className="hover:text-blue-400">Contact</Link>
+    <div className="bg-[#0e0f11] text-white min-h-screen font-sans">
+      <header className="w-full py-6 border-b border-gray-800">
+        <div className="max-w-4xl mx-auto px-4 flex justify-between items-center">
+          <h1 className="text-xl font-bold">Abhijit Mohanty</h1>
+          <nav className="space-x-4 text-sm text-gray-400">
+            <Link href="#home" className="hover:text-white">Home</Link>
+            <Link href="#about" className="hover:text-white">About</Link>
+            <Link href="#skills" className="hover:text-white">Skills</Link>
+            <Link href="#experience" className="hover:text-white">Experience</Link>
+            <Link href="#contact" className="hover:text-white">Contact</Link>
           </nav>
         </div>
       </header>
-      <main className="max-w-5xl mx-auto px-4">{children}</main>
+
+      <main className="max-w-4xl mx-auto px-4 py-10 space-y-24">
+        {children}
+      </main>
     </div>
   )
 }

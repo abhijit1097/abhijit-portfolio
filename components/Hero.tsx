@@ -1,18 +1,18 @@
-// components/Hero.tsx
 export default function Hero() {
     return (
-      <section className="min-h-screen flex flex-col justify-center items-center text-center px-6">
-        <h1 className="text-4xl md:text-6xl font-bold mb-4">
-          Hi, I’m <span className="text-blue-400">Abhijit Mohanty</span>
+      <section id="home" className="text-center">
+        <h1 className="text-4xl md:text-5xl font-bold mb-4">
+          Hi, I'm Abhijit <span className="inline-block">👋</span>
         </h1>
-        <p className="text-lg md:text-xl text-gray-300 max-w-xl mb-6">
-          Senior Backend Engineer specialized in Node.js, TypeScript, Kafka, and scalable distributed systems.
+  
+        <p className="text-gray-400 text-lg md:text-xl mb-6 max-w-2xl mx-auto">
+          Senior Backend Engineer specializing in Node.js, TypeScript, Kafka, and scalable backend systems.
         </p>
   
         <a
-          href="/Abhijit_backend_developer.pdf"
+          href="/abhijit_resume.pdf"
           download
-          className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded transition"
+          className="inline-block bg-gray-800 hover:bg-gray-700 text-white px-6 py-2 rounded-lg transition-colors border border-gray-700"
         >
           Download Resume
         </a>

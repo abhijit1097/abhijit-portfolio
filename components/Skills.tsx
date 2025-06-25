@@ -1,24 +1,25 @@
 const skills = [
-    'Node.js', 'TypeScript', 'JavaScript', 'Express.js', 'NestJS',
-    'PostgreSQL', 'MySQL', 'MongoDB', 'Sequelize', 'Mongoose',
-    'Kafka', 'Redis', 'Pub/Sub', 'Docker', 'Kubernetes',
-    'AWS (EC2, S3, Lambda)', 'GCP (basic)', 'CI/CD', 'Git',
-    'Microservices', 'Distributed Systems', 'Event-driven Systems', 'System Design',
-    'Jest', 'Swagger/OpenAPI', 'Postman'
+    { icon: "/icons/nodejs.svg", alt: "Node.js" },
+    { icon: "/icons/typescript.svg", alt: "TypeScript" },
+    { icon: "/icons/mongodb.svg", alt: "MongoDB" },
+    { icon: "/icons/postgresql.svg", alt: "PostgreSQL" },
+    { icon: "/icons/kafka.png", alt: "Kafka" },
+    { icon: "/icons/redis.svg", alt: "Redis" },
   ]
   
   export default function Skills() {
     return (
-      <section id="skills" className="py-20 text-center">
-        <h2 className="text-3xl font-bold mb-10">Skills</h2>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 max-w-5xl mx-auto text-gray-300">
+      <section id="skills" className="text-center space-y-10">
+        <h2 className="text-2xl md:text-3xl font-bold">Skills</h2>
+  
+        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-6 place-items-center">
           {skills.map((skill, index) => (
-            <div
+            <img
               key={index}
-              className="bg-gray-800 p-4 rounded-lg shadow hover:bg-gray-700 transition"
-            >
-              {skill}
-            </div>
+              src={skill.icon}
+              alt={skill.alt}
+              className="w-12 h-12 object-contain Use drop-shadow to give icons subtle pop:"
+            />
           ))}
         </div>
       </section>
