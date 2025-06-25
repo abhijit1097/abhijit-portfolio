@@ -1,28 +1,36 @@
+'use client'
+
 const skills = [
-    { icon: "/icons/nodejs.svg", alt: "Node.js" },
-    { icon: "/icons/typescript.svg", alt: "TypeScript" },
-    { icon: "/icons/mongodb.svg", alt: "MongoDB" },
-    { icon: "/icons/postgresql.svg", alt: "PostgreSQL" },
-    { icon: "/icons/kafka.png", alt: "Kafka" },
-    { icon: "/icons/redis.svg", alt: "Redis" },
-  ]
-  
-  export default function Skills() {
-    return (
-      <section id="skills" className="text-center space-y-10">
-        <h2 className="text-2xl md:text-3xl font-bold">Skills</h2>
-  
-        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-6 place-items-center">
-          {skills.map((skill, index) => (
+  '/icons/nodejs.svg',
+  '/icons/nestjs.svg',
+  '/icons/typescript.svg',
+  '/icons/postgresql.svg',
+  '/icons/mongodb.svg',
+  '/icons/kafka.png',
+  '/icons/redis.svg',
+  '/icons/aws.svg',
+  '/icons/docker.svg',
+  '/icons/kube.svg',
+  '/icons/elastic.svg',
+  '/icons/serverless.svg',
+]
+
+export default function Skills() {
+  return (
+    <section id="skills" className="py-10 space-y-10 text-center">
+      <h2 className="text-2xl md:text-3xl font-bold mb-8">Skills</h2>
+
+      <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-8 place-items-center px-4">
+        {skills.map((icon, index) => (
+          <div key={index} className="w-16 h-16">
             <img
-              key={index}
-              src={skill.icon}
-              alt={skill.alt}
-              className="w-12 h-12 object-contain Use drop-shadow to give icons subtle pop:"
+              src={icon}
+              alt=""
+              className="w-full h-full object-contain drop-shadow transition-transform hover:scale-110"
             />
-          ))}
-        </div>
-      </section>
-    )
-  }
-  
+          </div>
+        ))}
+      </div>
+    </section>
+  )
+}

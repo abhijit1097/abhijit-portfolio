@@ -1,55 +1,56 @@
+'use client'
+import { motion } from 'framer-motion'
+
 const experience = [
-    {
-      company: "Virtusa",
-      role: "Senior Software Engineer",
-      period: "Feb 2024 – Present",
-      points: [
-        "Built backend services using Node.js, TypeScript, PostgreSQL, and Redis",
-        "Implemented flow orchestration, JWT auth, and notification service",
-        "Optimized scheduler using Redis and enhanced automation",
-        "Wrote unit tests with Jest and documented with Swagger",
-      ],
-    },
-    {
-      company: "Taskmo",
-      role: "Senior Backend Developer",
-      period: "Sep 2019 – Feb 2024",
-      points: [
-        "Designed and scaled microservices architecture",
-        "Integrated Kafka and event-driven pipelines",
-        "Led a team of 10+ developers and owned backend systems",
-        "Implemented secure APIs, payment systems, and third-party integrations",
-      ],
-    },
-  ]
-  
-  export default function Experience() {
-    return (
-      <section id="experience" className="space-y-10">
-        <h2 className="text-2xl md:text-3xl font-bold text-center">Experience</h2>
-  
-        <div className="space-y-10">
-          {experience.map((job, index) => (
-            <div key={index} className="flex flex-col md:flex-row md:space-x-10">
-              {/* Left column: company + period */}
-              <div className="w-full md:w-1/3 text-sm text-gray-400">
-                <p className="font-semibold text-white">{job.company}</p>
-                <p>{job.period}</p>
-              </div>
-  
-              {/* Right column: role + bullets */}
-              <div className="w-full md:w-2/3 space-y-2">
-                <p className="font-medium text-white">{job.role}</p>
-                <ul className="list-disc list-inside text-gray-300 text-sm space-y-1">
-                  {job.points.map((point, i) => (
-                    <li key={i}>{point}</li>
-                  ))}
-                </ul>
-              </div>
-            </div>
+  {
+    title: 'Senior Software Engineer',
+    company: 'Virtusa',
+    period: 'Feb 2024 – Present',
+  },
+  {
+    title: 'Senior Backend Developer',
+    company: 'Taskmo (Quess)',
+    period: 'March 2020 – Feb 2024',
+  },
+  {
+    title: 'Founding Engineer',
+    company: 'FeedMyPockets',
+    period: 'Sep 2019 – March 2020',
+  },
+]
+
+export default function Experience() {
+  return (
+    <section id="experience" className="text-center px-4 py-20 space-y-10">
+      <h2 className="text-2xl md:text-3xl font-bold">Experience</h2>
+
+      <motion.div
+        className="cursor-grab active:cursor-grabbing overflow-hidden"
+        whileTap={{ cursor: 'grabbing' }}
+      >
+        <motion.div
+          className="flex gap-8 px-4"
+          drag="x"
+          dragConstraints={{ left: -400, right: 0 }}
+        >
+          {experience.map((item, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: index * 0.2 }}
+              viewport={{ once: true }}
+              className="bg-gray-900 border border-gray-800 rounded-xl p-6 w-72 flex-shrink-0 text-left shadow-lg hover:shadow-blue-500/40 transition-shadow"
+            >
+              {/* Timeline Dot */}
+              <div className="w-4 h-4 bg-blue-500 rounded-full mb-4 shadow-md" />
+              <p className="text-sm text-gray-400 mb-1">{item.period}</p>
+              <h3 className="text-lg font-semibold text-white">{item.title}</h3>
+              <p className="text-sm text-gray-300">{item.company}</p>
+            </motion.div>
           ))}
-        </div>
-      </section>
-    )
-  }
-  
+        </motion.div>
+      </motion.div>
+    </section>
+  )
+}
